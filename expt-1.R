@@ -1,3 +1,8 @@
+# EXPERIMENT 1
+# Explore the harmonic SSL solution on synthetic data,
+# including NN graph construction with distance threshold
+# just enough to form connected graph.
+
 source("functions.R")
 
 # generate some data

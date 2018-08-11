@@ -1,3 +1,11 @@
+# EXPERIMENT 3
+# Explore dependence of stream classification performance 
+# and of running time on the window graph size.
+# Fix dimensional reduction of zip data set, treated as 
+# binary 0/not-0 classification problem, and randomly sample 
+# data subsets and model hyperparameters, to build data set 
+# of performance.
+
 source("functions.R")
 
 library(ElemStatLearn)

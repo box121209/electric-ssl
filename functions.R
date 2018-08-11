@@ -351,7 +351,7 @@ tlp_2 <- function(instream, winsize=6, viz=FALSE){
       out <- outstream[1:thistime,]
       
       setwd("../tmp")
-      pdf(sprintf("img_%d.pdf", thistime))
+      png(sprintf("img_%d.png", thistime))
       plot(instream$X1,instream$X2, col='grey', pch=1, cex=2,
            xlab='', ylab='', axes=FALSE)
       for(u in V(h)){

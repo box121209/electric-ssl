@@ -1,16 +1,22 @@
+# EXPERIMENT 2  
+# Explore TLP implementation on synthetic data,
+# for performance and visualisations.
+
 source("functions.R")
 
 
 # the main parameter choices
 
-labprob <- 0.03 # proportion of labeled points
+labprob1 <- 0.1 # proportion of labeled points
+labprob2 <- 0.05 # proportion of labeled points
+ssize1 <- 100    # sample size per class
+ssize2 <- 50    # sample size per class
+mixing <- 10.0   # relative sd of the two classes
 winsize <- 6    # size of sliding graph
-ssize <- 100    # sample size per class
-mixing <- 1.0   # relative sd of the two classes
 
-dat <- make_2_normal_clusters(ssize,ssize, 
-                              l1=ceiling(labprob*ssize), 
-                              l2=ceiling(labprob*ssize), 
+dat <- make_2_normal_clusters(ssize1,ssize2, 
+                              l1=ceiling(labprob1*ssize1), 
+                              l2=ceiling(labprob2*ssize2), 
                               sd1=mixing)
 
 # input/output data streams...
