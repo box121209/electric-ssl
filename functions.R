@@ -350,7 +350,7 @@ tlp_2 <- function(instream, winsize=6, viz=FALSE){
       col <- rev(green2red(101))[1+round(outstream$cls,2)*100]
       out <- outstream[1:thistime,]
       
-      setwd("./tmp")
+      setwd("../tmp")
       pdf(sprintf("img_%d.pdf", thistime))
       plot(instream$X1,instream$X2, col='grey', pch=1, cex=2,
            xlab='', ylab='', axes=FALSE)
@@ -372,7 +372,7 @@ tlp_2 <- function(instream, winsize=6, viz=FALSE){
              out$X2[out$lbl==1], 
              lwd=3, cex=2.5)
       dev.off()
-      setwd("..")
+      setwd("../electric-ssl")
     }
   }
   # return
