@@ -108,6 +108,7 @@ for(expt in 1:1000){
 
 # ANALYSIS OF THE RESULTS
 
+lowdim <- 3
 res <- read.table(sprintf("zip_expt_%d.txt", lowdim))
 names(res) <- c("n", 
                 "cls", 
@@ -123,13 +124,13 @@ normtime <- time/res$n
 boxplot(normtime ~ win, 
         xlab="Window size",
         ylab="Time per item",
-        col='yellow', frame.plot=0)
+        col='lightgrey', frame.plot=0)
 
 # prediction performance by window size:
 boxplot(harderr ~ win, 
         xlab="Window size",
         ylab="Prediction error",
-        col='yellow', frame.plot=0)
+        col='lightgrey', frame.plot=0)
 
 # prediction performance by proportion of labels:
 lblprob <- lbl/res$n
